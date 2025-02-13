@@ -11,6 +11,7 @@ def main():
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                event.__reduce_ex__()
 
 if __name__ == "__main__":
-    main();
+    main()
