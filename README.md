@@ -1,54 +1,60 @@
 # Minesweeper
 
-A Python implementation of the classic Minesweeper game using the `tkinter` library for the graphical user interface.
+A simple Minesweeper game built using Python and Tkinter.
 
 ## Features
 
-- **Difficulty Levels**: Choose from Easy, Medium, or Hard modes, each with varying grid sizes and mine counts.
-- **Intuitive Controls**:
-  - **Left-Click**: Reveal a cell.
-  - **Right-Click**: Flag or unflag a cell as a potential mine.
-- **Automatic Cell Reveal**: Uncover all adjacent non-mine cells when a cell with zero neighboring mines is revealed.
-- **Game Over Detection**: Alerts when a mine is uncovered or when all non-mine cells are successfully revealed.
-
-## Requirements
-
-- Python 3.x
-- `tkinter` library (usually included with standard Python installations)
+- **Customizable Difficulty Levels:** Choose from Easy (8x8, 10 mines), Medium (10x10, 15 mines), Hard (15x15, 30 mines), or define your own custom settings.
+- **Intuitive Controls:**
+  - Left-click to reveal a cell.
+  - Right-click to flag or unflag a cell as a mine.
+  - Double-click to reveal surrounding cells if the number of flagged cells matches the number of mines around.
+- **Real-Time Statistics:** Track your game statistics, including the number of games played, wins, win rate, and best times for each difficulty level.
 
 ## Installation
 
-1. **Clone the Repository**:
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/singhvibhanshu/MineSweeper.git
    cd MineSweeper
    ```
-
-2. **Run the Game**:
+2. **Install Dependencies:**
+   Ensure you have Python installed on your system. The game uses the Tkinter library, which comes pre-installed with standard Python distributions. If for some reason it's not installed, you can install it using:
    ```bash
-   python minesweeper.py
+   pip install tk
    ```
+
+## Usage
+
+Run the game using the following command:
+```bash
+python minesweeper.py
+```
+Upon launching, you'll be presented with a menu to select the difficulty level or define custom game settings.
 
 ## How to Play
 
-1. **Launch the Game**: Run the `minesweeper.py` script.
-2. **Select Difficulty**: Choose your desired difficulty level from the main menu.
-3. **Gameplay**:
-   - **Reveal Cells**: Left-click on cells to uncover them.
-   - **Flag Mines**: Right-click on cells to mark or unmark them as potential mines.
-4. **Winning the Game**: Successfully reveal all non-mine cells without triggering any mines.
-5. **Losing the Game**: Uncovering a cell containing a mine will end the game.
+- **Objective:** Uncover all cells that do not contain mines.
+- **Controls:**
+  - **Reveal a Cell:** Left-click on the cell.
+  - **Flag/Unflag a Cell:** Right-click on the cell to mark it as a potential mine or remove the flag.
+  - **Chord:** Double-click on a revealed cell to uncover its neighboring cells if the number of flagged cells around matches the number of mines.
+
+## Statistics
+
+The game maintains statistics for each difficulty level, including:
+- Total games played
+- Number of wins
+- Win rate percentage
+- Best completion time
+
+You can view these statistics from the main menu by selecting the "View Statistics" option.
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit issues or pull requests to enhance the game.
+Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- Inspired by the classic Minesweeper game.
-- Developed using Python and the `tkinter` library for GUI components.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
